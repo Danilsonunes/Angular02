@@ -1,0 +1,17 @@
+<h1>Exercício 2 Angular</h1>
+<button (click)="GetDataFromAPI()">
+  Obter Dados da https://jsonplaceholder.typicode.com/users
+</button>
+<div class="container">
+  <ul *ngFor="let d of data">
+    <li><b>Id: </b>{{ d.id }}</li>
+    <li><b>Nome: </b>{{ d.name }}</li>
+    <li><b>Username: </b>{{ d.username }}</li>
+    <li><b>Email: </b>{{ d.email }}</li>
+    <li>
+      <b>Endereco: </b>Rua: {{ d.address.street }}, Numero:
+      {{ d.address.suite }}, Ciudad: {{ d.address.city }}, CEP:
+      {{ d.address.zipcode }}
+    </li>
+  </ul>
+</div>
